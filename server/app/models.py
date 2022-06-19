@@ -21,21 +21,21 @@ class User(db.Model):
       "zipCode": self.zipCode
     }
 
-class Console(db.Model):
+class Farm(db.Model):
   __tablename__ = "farms"
 
   id = db.Column(db.Integer, primary_key = True)
   name = db.Column(db.String(255), nullable=False, unique=True)
   location = db.Column(db.String(255), nullable=False)
 
-class Game(db.Model):
+class AddOn(db.Model):
   __tablename__ = "addOns"
 
   id = db.Column(db.Integer, primary_key = True)
   name = db.Column(db.String(255), nullable=False, unique=True)
 
 
-class Library(db.Model):
+class FarmAddOn(db.Model):
   __tablename__ = "farmAddOns"
 
   id = db.Column(db.Integer, primary_key = True)
